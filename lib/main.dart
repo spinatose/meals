@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meals/presentation/screen/categories_screen.dart';
 
 final theme = ThemeData(
   useMaterial3: true,
   colorScheme: ColorScheme.fromSeed(
     brightness: Brightness.dark,
-    seedColor: const Color.fromARGB(255, 131, 57, 0),
+    seedColor: const Color.fromARGB(255, 161, 103, 59),
   ),
   textTheme: GoogleFonts.latoTextTheme(),
 );
@@ -24,7 +25,7 @@ class App extends StatelessWidget {
       theme: theme,
       home: const Scaffold(
         body: Center(
-          child: Text('Hello, World!'),
+          child: CategoriesScreen(key: Key("categories")),
         ),
       ),
     );
