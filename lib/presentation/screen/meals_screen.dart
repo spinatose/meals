@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meals/domain/category.dart';
 import 'package:meals/domain/meal.dart';
+import 'package:meals/presentation/widget/meal_tileitem.dart';
 class MealsScreen extends StatelessWidget {
   final Category category;
   final List<Meal> meals;
@@ -35,7 +36,7 @@ class MealsScreen extends StatelessWidget {
       body: ListView.builder(
         itemCount: meals.length,
         itemBuilder: (ctx, index) {
-          return Text(meals[index].title);
+          return MealTileItem(meal: meals[index]);
         },
       ),
     );

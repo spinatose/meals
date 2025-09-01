@@ -37,6 +37,7 @@ dependencies:
   
   # Google Fonts package for accessing Google's font library
   google_fonts: ^6.1.0
+  transparent_image: ^2.0.1
 
 dev_dependencies:
   flutter_test:
