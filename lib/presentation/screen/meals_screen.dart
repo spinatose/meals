@@ -5,8 +5,9 @@ import 'package:meals/presentation/widget/meal_tileitem.dart';
 class MealsScreen extends StatelessWidget {
   final Category category;
   final List<Meal> meals;
+  final void Function(BuildContext context, Meal meal) onSelectMeal;
   
-  const MealsScreen({super.key, required this.category, required this.meals});
+  const MealsScreen({super.key, required this.category, required this.meals, required this.onSelectMeal});
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +37,7 @@ class MealsScreen extends StatelessWidget {
       body: ListView.builder(
         itemCount: meals.length,
         itemBuilder: (ctx, index) {
-          return MealTileItem(meal: meals[index]);
+          return MealTileItem(meal: meals[index], onSelectMeal: (context) => onSelectMeal(context, meals[index]));
         },
       ),
     );
