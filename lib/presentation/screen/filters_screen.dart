@@ -11,19 +11,11 @@ class FiltersScreen extends StatefulWidget {
 }
 
 class _FiltersScreenState extends State<FiltersScreen> {
-  var _glutenFreeSet = false;
-  var _lactoseFreeSet = false;
-  var _veganSet = false;
-  var _vegetarianSet = false;
+  late var _glutenFreeSet = widget.currentFilters[Filter.glutenFree] ?? false;
+  late var _lactoseFreeSet = widget.currentFilters[Filter.lactoseFree] ?? false;
+  late var _veganSet = widget.currentFilters[Filter.vegan] ?? false;
+  late var _vegetarianSet = widget.currentFilters[Filter.vegetarian] ?? false;
 
-  @override
-  void initState() {
-    super.initState();
-    _glutenFreeSet = widget.currentFilters[Filter.glutenFree] ?? false;
-    _lactoseFreeSet = widget.currentFilters[Filter.lactoseFree] ?? false;
-    _veganSet = widget.currentFilters[Filter.vegan] ?? false;
-    _vegetarianSet = widget.currentFilters[Filter.vegetarian] ?? false;
-  }
 
   @override
   Widget build(BuildContext context) {

@@ -18,7 +18,7 @@ class MealsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     if (meals.isEmpty) {
       return Scaffold(
-        appBar: AppBar(title: Text(title!)),
+        appBar: title != null ? AppBar(title: Text(title!)) : null,
         body: Center(
         child: Column(
             mainAxisSize: MainAxisSize.min,
